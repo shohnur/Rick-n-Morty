@@ -13,6 +13,8 @@ import org.koin.core.inject
 import org.koin.core.qualifier.named
 import retrofit2.HttpException
 import uz.task.R
+import uz.task.db.Dao
+import uz.task.db.Data
 import uz.task.loge
 import uz.task.network.ApiInterface
 import uz.task.network.RetrofitClient
@@ -21,7 +23,7 @@ import uz.task.utils.Errors
 import uz.task.utils.baseUrl
 
 open class AppViewModel(
-    private val gson: Gson, private val context: Context
+    private val gson: Gson, private val context: Context, private val dao: Dao
 ) : ViewModel(), KoinComponent {
 
     val data: MutableLiveData<Any> by inject()
@@ -47,6 +49,12 @@ open class AppViewModel(
         api.getAllCharacters(page).observeAndSubscribe().subscribe(
             {
                 data.value = it
+
+
+                it.results.forEach { res ->
+                    dao.insert(Data(0, res.name, res.status, res.origin.name, res.image))
+                }
+
             }, { parseError(it) }
         )
     )
