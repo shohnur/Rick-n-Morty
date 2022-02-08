@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.itkacher.okhttpprofiler:okhttpprofiler:1.0.7@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/031ddc453c418db121d17e6161b255f8/transformed/jetified-okhttpprofiler-1.0.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/031ddc453c418db121d17e6161b255f8/transformed/jetified-okhttpprofiler-1.0.7/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/031ddc453c418db121d17e6161b255f8/transformed/jetified-okhttpprofiler-1.0.7/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
